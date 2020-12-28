@@ -1,0 +1,57 @@
+/**
+ * Global
+ */
+
+a {
+    color: map-get($theme-colors, 'primary');
+}
+
+
+/**
+ * Block editor color palette utilities
+ * @see https://git.io/JeyD6
+ */
+
+@each $color-name,
+$color-value in $theme-colors {
+    .has-#{$color-name}-color {
+        color: $color-value;
+    }
+    .has-#{$color-name}-background-color {
+        background-color: $color-value;
+    }
+}
+
+.navlogo {
+    text-align: center;
+    margin: 0px;
+}
+
+.headmenu {
+    text-align: center;
+}
+
+ul.topnav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.topnav li {
+    display: inline-block;
+}
+
+.topnav li a {
+    display: inline-block;
+    color: #111111;
+    text-align: center;
+    text-decoration: none;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+.topnav li a:hover {
+    color: map-get($theme-colors, 'primary');
+}
